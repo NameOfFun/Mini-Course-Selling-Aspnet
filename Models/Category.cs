@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Course_Selling_System.Models;
+
+public partial class Category
+{
+    public int Id { get; set; }
+
+    public string Name { get; set; } = null!;
+
+    public string Slug { get; set; } = null!;
+
+    public virtual ICollection<Course> Courses { get; set; } = new List<Course>();
+}
