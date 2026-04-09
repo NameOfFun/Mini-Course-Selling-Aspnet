@@ -1,5 +1,7 @@
 
 using Course_Selling_System.Models;
+using Course_Selling_System.Service.Implementations;
+using Course_Selling_System.Service.Interface;
 using Microsoft.EntityFrameworkCore;
 
 namespace Course_Selling_System
@@ -16,6 +18,8 @@ namespace Course_Selling_System
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<CourseSellingDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("MyCnn")));
             
+            //DI
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
