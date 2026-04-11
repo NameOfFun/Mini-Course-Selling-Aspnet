@@ -16,7 +16,7 @@ namespace Course_Selling_System.Controller
         }
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<CategoryDto>),StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetAllCategories(CancellationToken ct = default)
+        public async Task<IActionResult> GetAllCategories(CancellationToken ct)
         {
             var categories = await _categoryService.GetAllCategoriesAsync(ct);
             return Ok(categories);

@@ -20,6 +20,8 @@ namespace Course_Selling_System
             
             //DI
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<ICourseService, CourseService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
