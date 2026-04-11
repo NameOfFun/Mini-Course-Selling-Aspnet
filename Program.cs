@@ -21,6 +21,7 @@ namespace Course_Selling_System
             //DI
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<ICourseService, CourseService>();
+            builder.Services.AddScoped<ILessonService, LessonService>();
 
             var app = builder.Build();
 
