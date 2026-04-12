@@ -2,7 +2,7 @@
 
 namespace Course_Selling_System.Dtos
 {
-    public class Login
+    public class LoginRegister
     {
         [Required, EmailAddress]
         public string Email { get; set; } = null!;
