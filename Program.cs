@@ -54,6 +54,7 @@ namespace Course_Selling_System
             builder.Services.AddScoped<ICourseService, CourseService>();
             builder.Services.AddScoped<ILessonService, LessonService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
 
             // Bearer
             builder.Services.AddSwaggerGen(opt =>
